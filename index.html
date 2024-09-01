@@ -28,8 +28,18 @@
             <p class="main-logo">Mount Vista <span>.</span></p>
             <nav class="main-navbar">
                 <ul class="main-menu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="about-nav-item">
+                        <a href="#about">About</a>
+                        <div class="about-dropdown">
+                            <ul>
+                                <li><a href="#about">About Us</a></li>
+                                <li><a href="#amenities">Amenities</a></li>
+                                <li><a href="#faqs">FAQs</a></li>
+                                <li><a href="#testimonials">Testimonials</a></li>
+                            </ul>
+                        </div>
+                    </li>
                     <li><a href="rooms.html">Rooms</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="contact.html" class="btn btn-nav">Enquire Now</a></li>
@@ -89,11 +99,271 @@
                     <p class="text about-text">
                         Guests at the guest house can enjoy hiking nearby, or make the most of the garden. Pretoria Country Club is 20 km from Mount Vista, while Rietvlei Nature Reserve is 30 km away. The nearest airport is Wonderboom Airport, 8 km from the accommodation.
                     </p>
+
+                    <a href="rooms.html" class="about-btn">
+                        See Our Rooms
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
        </section>
-    
+
+       <!-- Amenities Section -->
+        <section class="amenities-section" id="amenities">
+            <div class="container">
+                <h2 class="section-title title-lowercase">
+                    Amenities
+                </h2>
+                <div class="amenities">
+                    <div class="amenity">
+                        <i class="fas fa-wifi"></i>
+                        <span class="amenity-name">Free Wifi</span>
+                    </div>
+                    <div class="amenity">
+                        <i class="fas fa-shirt"></i>
+                        <span class="amenity-name">Laundry Services</span>
+                    </div>
+                    <div class="amenity">
+                        <i class="fas fa-car"></i>
+                        <span class="amenity-name">Secured Parking</span>
+                    </div>
+                    <div class="amenity">
+                        <i class="fas fa-lock"></i>
+                        <span class="amenity-name">24/7 Security</span>
+                    </div>
+                    <div class="amenity">
+                        <i class="fas fa-broom"></i>
+                        <span class="amenity-name">Daily Housekeeping</span>
+                    </div>
+                    <div class="amenity">
+                        <i class="fas fa-utensils"></i>
+                        <span class="amenity-name">Food &amp Drinks</span>
+                    </div>
+                    <div class="amenity">
+                        <i class="fas fa-tv"></i>
+                        <span class="amenity-name">Flat Screen TV</span>
+                    </div>
+                    <div class="amenity">
+                        <i class="fas fa-tv"></i>
+                        <span class="amenity-name">DSTV Package</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQs Section -->
+         <section class="faqs-section" id="faqs">
+            <div class="container">
+                <h2 class="section-title faqs-title">
+                    Frequently Asked Questions
+                </h2>
+                <!-- <p class="faqs-text">
+                    Here we answered some of the questions you might have as well.
+                </p> -->
+                <div class="faqs">
+                    <details open>
+                        <summary>
+                            Does Mount Vista provide laundry Services ?
+                            <div class="faqs-btns">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-minus"></i>
+                            </div>
+                        </summary>
+                        <p class="answer">
+                            Yes! Mount Vista Guest House offers laundry service at your grasp for whenever you need your favorite clothes clean and fresh all throughout your holiday. Please contact the property for more information.
+                        </p>
+                    </details>
+                    <details>
+                        <summary>
+                            What time is check-in and check-out at Mount Vista Guest House ?
+                            <div class="faqs-btns">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-minus"></i>
+                            </div>
+                        </summary>
+                        <p class="answer">
+                            Check-in is from 02:00 PM, and check-out is until 10:00 AM. <br> You may request early check-in or late check-out during booking, subject to availability. Travelers checking in or out before or after the specified periods may be charged an additional fee.
+                        </p>
+                    </details>
+                    <details>
+                        <summary>
+                            Does Mount Vista Guest House offer free cancellation for a full refund ?
+                            <div class="faqs-btns">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-minus"></i>
+                            </div>
+                        </summary>
+                        <p class="answer">
+                            Yes, Mount Vista Guest House does have fully refundable room rates available to book on our site. If you've booked a fully refundable room rate, this can be cancelled up to a few days before check-in depending on the property's cancellation policy.
+                        </p>
+                    </details>
+                    <details>
+                        <summary>
+                            Is Breakfast offered at Mount Vista Guest House ?
+                            <div class="faqs-btns">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-minus"></i>
+                            </div>
+                        </summary>
+                        <p class="answer">
+                            Start your days right, with the buffet breakfast options made available at Mount Vista Guest House.
+                        </p>
+                    </details>
+                    <details>
+                        <summary>
+                            Is car parking available at the Guest House ?
+                            <div class="faqs-btns">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-minus"></i>
+                            </div>
+                        </summary>
+                        <p class="answer">
+                            Mount Vista Guest House has car park free of charge for all visitors traveling with a vehicle. Please contact the property for more information
+                        </p>
+                    </details>
+                    <details>
+                        <summary>
+                            Is there a swimming pool ?
+                            <div class="faqs-btns">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-minus"></i>
+                            </div>
+                        </summary>
+                        <p class="answer">
+                            Yes, there is a swimming pool at our guest house!
+                        </p>
+                    </details>
+                    <details>
+                        <summary>
+                            Are pets allowed ?
+                            <div class="faqs-btns">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-minus"></i>
+                            </div>
+                        </summary>
+                        <p class="answer">
+                            Sorry, pets aren't allowed.
+                        </p>
+                    </details>
+                </div>
+            </div>
+         </section>
+
+         <!-- Testimonials Section -->
+          <section class="testimonials-section" id="testimonials">
+            <div class="container">
+                <h2 class="section-title test-title">
+                    Client Testimonials
+                </h2>
+                <div class="card-group card-group-1">
+                    <div class="card">
+                        <img src="images/outside1.jpg" alt="image">
+                            <span>
+                                <h4 class="person-name">
+                                    Richard
+                                </h4>
+                                <p class="job">
+                                    Manager at his company
+                                </p>
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </span>
+                            <p class="test-card-text">
+                                The detail of amenities are extraordinary, very warm atmosphere as well!
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque nesciunt in totam ut quos consequatur optio numquam et quibusdam magni?
+                            </p>
+                    </div>
+                    <div class="card">
+                        <img src="images/outside1.jpg" alt="image">
+                            <span>
+                                <h4 class="person-name">
+                                    Richard
+                                </h4>
+                                <p class="job">
+                                    Manager at his company
+                                </p>
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </span>
+                            <p class="test-card-text">
+                                The detail of amenities are extraordinary, very warm atmosphere as well!
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque nesciunt in totam ut quos consequatur optio numquam et quibusdam magni?
+                            </p>
+                    </div>
+                </div>
+
+                <!-- card group 2 -->
+                 <div class="card-group card-group-2">
+                    <div class="card">
+                        <img src="images/outside1.jpg" alt="image">
+                            <span>
+                                <h4 class="person-name">
+                                    Richard
+                                </h4>
+                                <p class="job">
+                                    Manager at his company
+                                </p>
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </span>
+                            <p class="test-card-text">
+                                The detail of amenities are extraordinary, very warm atmosphere as well!
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque nesciunt in totam ut quos consequatur optio numquam et quibusdam magni?
+                            </p>
+                    </div>
+                    <div class="card">
+                        <img src="images/outside1.jpg" alt="image">
+                            <span>
+                                <h4 class="person-name">
+                                    Richard
+                                </h4>
+                                <p class="job">
+                                    Manager at his company
+                                </p>
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </span>
+                            <p class="test-card-text">
+                                The detail of amenities are extraordinary, very warm atmosphere as well!
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque nesciunt in totam ut quos consequatur optio numquam et quibusdam magni?
+                            </p>
+                    </div>
+            </div>
+          </section>
+
+
+
+         <!-- back to top button -->
+         <div class="container">
+                <a class="back-to-top" href="index.html">
+                    Back to top
+                </a>
+         </div>
+         <!-- Footer -->
+    <footer>
+
+    </footer>
        <script src="script.js"></script>
 </body>
 </html>

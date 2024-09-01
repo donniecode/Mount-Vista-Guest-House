@@ -92,7 +92,7 @@ body {
   }
   header{
     width: 100%;
-    padding: 0.5rem 0;
+    padding: 0.3rem 0;
     background-color: #fff;
   }
   .header-flex{
@@ -112,13 +112,57 @@ body {
     display: flex;
     align-items: center;
   }
-  .main-menu li{
-    padding-left: 3rem;
+  .main-menu li:not(.about-dropdown ul li){
+    margin-left: 2.5rem;
+    padding: 0 0.5rem;
   }
   .main-menu li a{
     color: hsl(0, 0%, 38%);
     font-weight: 500;
   }
+
+/* About Navbar Item Dropdown */
+.about-nav-item{
+  position: relative;
+}
+.about-nav-item:hover .about-dropdown{
+  display: block;
+}
+.about-dropdown{
+  width: 200px;
+  height: auto;
+  z-index: 999;
+  position: absolute;
+  left: -100%;
+  background-color: hsl(0, 0%, 95%);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  box-shadow: 5px 5px 20px -10px, -5px -0px 20px -10px;
+  display: none;
+}
+.about-dropdown ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.about-dropdown ul li{
+  padding: 0.5rem;
+  border-bottom: 1.5px solid hsl(0, 0%, 70%);
+  color: hsl(0, 0%, 20%);
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+}
+.about-dropdown ul li:last-child{
+  border-bottom: none;
+}
+.about-dropdown ul li:hover{
+  background-color: hsl(0, 0%, 90%);
+  color: hsl(12, 100%, 75%);
+}
+
+
   .main-menu li a:not(.btn):hover{
     color: hsl(12, 100%, 83%);
   }
@@ -142,7 +186,7 @@ body {
   .hero{
     width: 100%;
     padding: 3rem 0;
-    background-image: linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)) ,url('images/hero.jpg');
+    background-image: linear-gradient(rgb(0, 0, 0, 0.8), rgb(0, 0, 0, 0.8)) ,url('images/hero.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -232,6 +276,7 @@ body {
     margin-bottom: 1rem;
     position: relative;
     display: inline-block;
+    text-transform: uppercase;
   }
   .section-title::after{
     content: "";
@@ -247,11 +292,164 @@ body {
     color: hsl(0, 0%, 20%);
     margin: 1rem 0;
   }
+  .about-btn{
+    background-color: transparent;
+    color: hsl(12, 100%, 75%);
+    font-weight: 800;
+    text-decoration: underline 0.095rem hsl(12, 100%, 75%);
+    text-underline-offset: 0.3rem;
+    padding-bottom: 1rem;
+  }
+  .about-btn:hover .fa-chevron-right{
+    transform: translateX(10px);
+  }
   
+/* Amenities styling */
+.title-lowercase{
+  text-transform: capitalize;
+}
+.amenities-section{
+  width: 100%;
+}
+.amenities{
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.amenities .amenity i{
+  color: hsl(0, 0%, 10%);
+}
+
+/* FAQs Section */
+.faqs-section{
+  width: 100%;
+  padding: 80px 0;
+  text-align: center;
+}
+.faqs-title{
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+.faqs-text{
+  font-size: 0.8rem;
+  font-style: italic;
+}
+.faqs{
+  max-width: 800px;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+details{
+  margin-top: 0.4rem;
+}
+summary{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  font-weight: 500;
+  background-color: hsl(0, 0%, 75%);
+  padding: 0.5rem 1rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  cursor: pointer;
+}
+.answer{
+  background-color: hsl(0, 0%, 90%);
+  font-weight: 400;
+  padding: 0.8rem 1rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+details[open] .fa-minus{
+  display: block;
+}
+details[open] .fa-plus{
+  display: none;
+}
+.faqs-btns{
+  display: block;
+  font-size: 1.2rem;
+}
+.fa-plus{
+  background-color: hsl(12, 100%, 75%);
+  color: #fff;
+  padding: 0.3rem;
+  border-radius: 50%;
+}
+.fa-minus{
+  background-color: hsl(0, 0%, 20%);
+  color: #fff;
+  padding: 0.3rem;
+  border-radius: 50%;
+  display: none;
+}
+
+/* Testimonials Section */
+.testimonials-section{
+  width: 100%;
+  padding: 80px 0;
+  text-align: center;
+}
+.card-group{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+  gap: 1.5rem;
+}
+.card{
+  max-width: 400px;
+  min-height: auto;
+  margin: 0 auto;
+  position: relative;
+  background-color: hsl(0, 0%, 80%);
+  padding: 1rem;
+}
+.card img{
+  width: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  aspect-ratio: 1;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.stars{
+  color: orangered;
+}
+
+
+
+/* Back To Top Button */
+.back-to-top{
+  background-color: hsl(0, 0%, 80%);
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  position: fixed;
+  right: 0;
+  bottom: 50px;
+  font-weight: 600;
+}
+
+/* Footer Section */
+footer{
+  min-height: 250px;
+  background-color: hsl(0, 0%, 20%);
+}
+
 
   /* gallery.css */
   .gallery-header{
-    background-color: hsl(0, 0%, 98%);
+    background-color: hsl(0, 0%, 95%);
   }
   .gallery-section{
     width: 100%;
@@ -285,6 +483,9 @@ body {
 
   /* gallery images */
   .gallery-images{
+    display: none;
+  }
+  .show-imgs{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
@@ -295,7 +496,74 @@ body {
     width: 220px;
     margin: 0 auto;
     border-radius: 0.5rem;
+    cursor: pointer;
   }
+
+  /* Rooms Section */
+  .rooms-header{
+    background-color: hsl(0, 0%, 95%);
+  }
+  .rooms-section{
+    width: 100%;
+    text-align: center;
+    background-color: hsl(0, 0%, 100%);
+    padding: 80px 0;
+  }
+  .rooms-title{
+    text-transform: uppercase;
+  }
+
+  /* rooms styling */
+  .rooms{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  .room{
+    max-width: 250px;
+    background-color: hsl(0, 0%, 90%);
+    color: hsl(0, 0%, 20%);
+    border-radius: 0.5rem;
+    height: 100%;
+    /* padding-bottom: 0.2rem;
+ */
+    box-shadow: 5px 5px 20px -10px;
+    margin: 0 auto;
+  }
+  .room img{
+    max-width: auto;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+  .room-name{
+    padding: 0.5rem 0;
+    color: hsl(0, 0%, 20%);
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  .room-details{
+    height: auto;
+    padding: 0.5rem;
+    background-color: hsl(0, 0%, 96%);
+    border: 1.5px solid hsl(12, 100%, 83%);
+    border-radius: 0.5rem;
+  }
+  .room-details h4{
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding-bottom: 0.3rem;
+  }
+  .room-details ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+  }
+  .room-details ul li{
+    font-size: 0.8rem;
+  }
+
   
 
 
@@ -303,9 +571,6 @@ body {
   @media(max-width: 50em){
     .main-menu{
       display: none;
-    }
-    .about-grid{
-      grid-template-columns: 1fr;
     }
     .about-section{
       text-align: center;
