@@ -2,6 +2,10 @@
 const lis = document.querySelectorAll('.gallery-tab-menu li');
 const allImgs = document.querySelectorAll('.gallery-images');
 
+/* each gallery for each li */
+
+
+
 lis.forEach((li)=>{
     li.addEventListener('click', (e)=>{
         li.classList.add('active-tab-item');
@@ -28,3 +32,20 @@ function imgsReset(){
     }
 }
 imgsReset();
+
+
+/* mobile navigation */
+const hamburger = document.querySelector('#hamburger');
+const closemenu = document.querySelector('#close-menu');
+const sidebar = document.querySelector('.mobile-nav');
+
+hamburger.addEventListener('click', ()=>{
+ hamburger.style.display='none';
+ closemenu.style.display='block';
+ sidebar.style.display='flex';
+})
+closemenu.addEventListener('click', ()=>{
+ hamburger.style.display='block';
+ closemenu.style.display='none';
+ sidebar.style.display='none';
+})
