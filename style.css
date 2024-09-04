@@ -638,37 +638,44 @@ footer{
 }
 .form-group{
   margin-bottom: 1rem;
+  width: 100%;
+  background-color: #fff;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+  border-radius: 0.5rem;
+}
+.message-group{
+  height: 90px;
+}
+.form-group i{
+  color: hsl(12, 100%, 70%);
 }
 .contact-form label{
   padding-left: 0.5rem;
 }
 .contact-form input{
-  border: 1.5px solid hsl(0, 0%, 30%);
+  border: none;
   /* border: none;
   border-bottom: 1.5px solid hsl(0, 0%, 30%); */
   width: 100%;
   border-radius: 0.3rem;
   padding: 0.4rem 0.5rem;
-  /* background-color: transparent; */
+  background-color: transparent;
 }
-.contact-form input:focus{
-  border: 1.5px solid hsl(0, 0%, 30%);
+.contact-form input:focus,
+.contact-form textarea:focus{
+  border: none;
   outline: none;
 }
 
-/* guests group */
-.guests-group{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 3rem;
-}
-
 .contact-form textarea{
+  border: none;
+  background-color: transparent;
   width: 100%;
-  min-height: 90px;
-  padding: 0.1rem 0.5rem;
-  border-radius: 0.3rem;
+  padding-top: 1rem;
+  margin-left: 0.5rem;
 }
 .submit-button{
   background-color: hsl(12, 100%, 75%);
@@ -808,4 +815,10 @@ footer{
       margin: 0 auto;
       border-radius: 0.5rem;
     }
+
+/* contact section */
+.contact-container{
+  width: 90%;
+  padding: 0;
+}
   }
