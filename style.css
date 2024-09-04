@@ -634,8 +634,7 @@ footer{
   padding: 1.5rem;
   border-radius: 0.5rem;
   margin-top: 2rem;
-  border: 1.5px solid hsl(12, 100%, 75%);
-  background-color: hsl(0, 0%, 80%);
+  background-color: hsl(0, 0%, 90%);
 }
 .form-group{
   margin-bottom: 1rem;
@@ -649,11 +648,11 @@ footer{
   border-bottom: 1.5px solid hsl(0, 0%, 30%); */
   width: 100%;
   border-radius: 0.3rem;
-  padding: 0.1rem 0.5rem;
+  padding: 0.4rem 0.5rem;
   /* background-color: transparent; */
 }
 .contact-form input:focus{
-  border: none;
+  border: 1.5px solid hsl(0, 0%, 30%);
   outline: none;
 }
 
@@ -663,9 +662,6 @@ footer{
   align-items: center;
   justify-content: space-between;
   gap: 3rem;
-}
-.guests-group div input{
-  width: 80%;
 }
 
 .contact-form textarea{
