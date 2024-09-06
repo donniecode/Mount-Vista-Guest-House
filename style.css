@@ -253,9 +253,18 @@ body {
     justify-content: center;
     gap: 1.5rem 4rem;
     flex-wrap: wrap;
+    transform: translateX(20%);
+    animation: icons 10s linear infinite forwards;
   }
   .trusted-by-icons img{
     max-width: 120px;
+  }
+  
+  /* icons animation */
+  @keyframes icons{
+   /* 0%{transform: translateX(10%);} */
+    50%{transform: translateX(-20%);}
+    100%{transform: translateX(20%);}
   }
 
   /* about section */
