@@ -86,7 +86,7 @@
                         Free free to send us a message here!
                     </p>
                     <!-- form -->
-                     <form method="POST" action="" class="contact-form">
+                     <form action="" class="contact-form">
                         <div class="form-group">
                             <i class="fas fa-user"></i>
                             <input type="text" id="name" name="Name" placeholder="Full Name">
@@ -103,12 +103,16 @@
                             <i class="fas fa-message"></i>
                             <textarea name="Message" id="message" placeholder="Message"></textarea>
                         </div>
-                        <button type="submit" class="submit-button">Send Message</button>
+                        <button type="submit" class="submit-button" id="submit-btn">Send Message</button>
                      </form>
                 </div>
             </div>
           </section>
 
-         <script src="contact.js"></script>
+
+          <script src="contact.js"></script>
+          <script src="https://smtpjs.com/v3/smtp.js"></script>
+          <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </body>
 </html>
