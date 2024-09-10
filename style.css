@@ -483,26 +483,6 @@ details[open] .fa-plus{
 }
 
 
-
-/* Back To Top Button */
-.back-to-top{
-  background-color: hsl(0, 0%, 80%);
-  padding: 0.5rem 1rem;
-  border-radius: 0.2rem;
-  position: fixed;
-  right: 10px;
-  bottom: 50px;
-  font-weight: 600;
-  display: none;
-}
-
-/* Footer Section */
-footer{
-  min-height: 250px;
-  background-color: hsl(0, 0%, 20%);
-}
-
-
   /* gallery.css */
   .gallery-header{
     background-color: hsl(0, 0%, 95%);
@@ -734,8 +714,38 @@ footer{
   cursor: pointer;
 }
 
+/* Back To Top Button */
+.back-to-top{
+  background-color: hsl(0, 0%, 80%);
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  position: fixed;
+  right: 10px;
+  bottom: 50px;
+  font-weight: 600;
+  display: none;
+}
 
+/* Footer Section */
+footer{
+  min-height: 250px;
+  padding: 1rem 0;
+  background-color: hsl(0, 0%, 20%);
+  position: relative;
+}
 
+/* footer attribution */
+.attribution{
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  bottom: 1rem;
+}
+.attribution a{
+  color: hsl(12, 100%, 70%);
+  text-decoration: underline 0.090rem hsl(12, 100%, 70%);
+  text-underline-offset: 0.1rem;
+}
 
 
 
@@ -959,8 +969,8 @@ footer{
   .gallery-tab-menu{
     background-color: #fff;
     position: sticky;
-    top: 3.5rem;
-    z-index: 1000;
+    top: 3.6rem;
+    z-index: 999;
     padding: 1rem 0;
   }
   }
