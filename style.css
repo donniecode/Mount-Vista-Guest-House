@@ -259,8 +259,7 @@ body {
     justify-content: center;
     gap: 1.5rem 4rem;
     flex-wrap: wrap;
-    transform: translateX(20%);
-    animation: icons 12s linear infinite forwards;
+   /* s */
   }
   .trusted-by-icons img{
     max-width: 120px;
@@ -831,6 +830,14 @@ footer{
       width: 100%;
       text-align: center;
       display: inline-block;
+    }
+
+    /* video */
+    video{
+      width: 80%;
+      height: auto;
+      margin: 0 auto;
+      display: block;
     }
     .btn-hero2{
       display: none;
