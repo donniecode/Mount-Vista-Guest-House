@@ -188,12 +188,18 @@ body {
   .hero{
     width: 100%;
     padding: 7rem 0 2rem 0;
-    background-image: linear-gradient(rgb(0, 0, 0, 0.8), rgb(0, 0, 0, 0.8)) ,url('images/hero.jpg');
+    background: linear-gradient(rgb(0, 0, 0, 0.8), rgb(0, 0, 0, 0.8)) ,url('images/hero.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 530px;
     position: relative;
+  }
+  video{
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
   }
   .hero-content{
     display: flex;
@@ -612,8 +618,25 @@ footer{
     justify-content: center
   }
   .room-details ul li{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 400;
   }
+.room-btn{
+ /*  color: hsl(12, 100%, 70%); */
+  color: #fff;
+  background-color: hsl(12, 100%, 70%);
+  margin-top: 0.3rem;
+  display: inline-block;
+  padding: 0 0.5rem;
+  border-radius: 100vmax;
+  font-weight: 400;
+  box-shadow: 0px 5px 20px -15px;
+}
+.room-btn:hover{
+  background-color: hsl(12, 100%, 75%);
+  transform: scale(0.95);
+}
+
 
   /* mobile html */
   .mobile-nav{
