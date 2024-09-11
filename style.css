@@ -776,6 +776,10 @@ details[open] .fa-plus{
 .socials-icons a i{
   font-size: 2rem;
 }
+/* google map */
+iframe{
+  max-width: 100%
+}
 
 
 /* whatsapp fixed button */
