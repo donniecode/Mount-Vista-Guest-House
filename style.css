@@ -766,6 +766,18 @@ details[open] .fa-plus{
   text-decoration: underline 0.090rem hsl(0, 0%, 30%);
 }
 
+/* socials icons */
+.socials-icons{
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.socials-icons a i{
+  font-size: 2rem;
+}
+
+
 /* whatsapp fixed button */
 .whatsapp-btn-fixed{
   position: fixed;
