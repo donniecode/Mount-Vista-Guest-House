@@ -642,7 +642,7 @@ details[open] .fa-plus{
   padding: 80px 0;
   background-color: hsl(0, 0%, 100%);
 }
-.contact-section .container{
+.contact-section .grid{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   align-items: center;
@@ -785,15 +785,14 @@ iframe{
 /* whatsapp fixed button */
 .whatsapp-btn-fixed{
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 2.1rem;
+  right: 1rem;
   background-color: rgb(81, 214, 81);
   z-index: 999;
   padding: 0.5rem 1rem;
   font-weight: 500;
   border-radius: 0.5rem;
   color: #fff;
-  box-shadow: 5px 5px 20px -15px;
 }
 
 
