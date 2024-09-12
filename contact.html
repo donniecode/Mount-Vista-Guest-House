@@ -18,6 +18,9 @@
         <link rel="shortcut icon" href="images/outside3.jpeg" type="image/x-icon">
     
         <link rel="stylesheet" href="style.css">
+        <!-- phone number codes -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+      />
         <title>Mount Vista Guest House | Contact</title>
     </head>
     <body>
@@ -74,7 +77,7 @@
          </header>
 
          <!-- contact section -->
-          <section class="contact-section">
+          <section class="contact-section" id="contact-section">
             <div class="container grid">
                 <div class="form-section">
                     <h2 class="section-title form-title">
@@ -88,6 +91,7 @@
                         <div class="form-group">
                             <i class="fas fa-user"></i>
                             <input type="text" id="name" name="Name" placeholder="Full Name">
+                            <div class="error" id="name-error"></div>
                         </div>
                         <div class="form-group">
                             <i class="fas fa-envelope"></i>
@@ -95,7 +99,7 @@
                         </div>
                         <div class="form-group">
                             <i class="fas fa-phone"></i>
-                            <input type="number" id="phone" name="Phone Number" placeholder="Phone Number">
+                            <input type="tel" id="phone" name="Phone Number" placeholder="Phone Number">
                         </div>
                         <div class="form-group message-group">
                             <i class="fas fa-message"></i>
@@ -143,7 +147,7 @@
           </section>
 
          <div class="container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1797.808499448726!2d28.13637692746079!3d-25.68398798795413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ebfd9eb4dae56d3%3A0x303a1814996bfd00!2sMountain%20Vista%20Guest%20house!5e0!3m2!1sen!2sza!4v1726074299396!5m2!1sen!2sza" width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1797.808499448726!2d28.13637692746079!3d-25.68398798795413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ebfd9eb4dae56d3%3A0x303a1814996bfd00!2sMountain%20Vista%20Guest%20house!5e0!3m2!1sen!2sza!4v1726074299396!5m2!1sen!2sza" width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
          </div>
 
            <!-- whatsapp button fixed -->
@@ -156,13 +160,33 @@
           <!-- footer -->
           <footer>
             <div class="container">
+             <div class="footer-grid">
+             <!-- bed and breakfast -->
+             <div class="stars-logo">
+                <img src="images/3-stars.png" alt="">
+            </div>
+            <!-- footer links -->
+             <div class="footer-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#amenities">Amenities</a></li>
+                    <li><a href="#faqs">FAQs</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                </ul>
+                <ul>
+                    <li><a href="rooms.html">Rooms</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html" class="btn-footer">Enquire Now</a></li>
+                </ul>
+             </div>
+            </div>
+        </div>
                 <div class="attribution">
-                    <div>
-                        Mount Vista &copy 2024
-                    </div>
+                    <div>Mount Vista &copy 2024</div>
                     <p>website created by <a href="https://www.instagram.com/doniecode/">Donald Zarura | @doniecode</a></p>
                 </div>
-            </div>
+         
             
         </footer>
 
@@ -170,5 +194,15 @@
           <script src="https://smtpjs.com/v3/smtp.js"></script>
           <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-</body>
+        </body>
+
+          <!-- international phone numbers -->
+ <script>
+   const phoneInputField = document.querySelector("#phone");
+   const phoneInput = window.intlTelInput(phoneInputField, {
+     utilsScript:
+       "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+   });
+ </script>
+ 
 </html>

@@ -14,8 +14,27 @@ closemenu.addEventListener('click', ()=>{
 })
 
 
-/* form smtpjs */
+/* form validation */
+/* const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+const phoneInput = document.querySelector('#phone');
+const messageInput= document.querySelector('#message');
 
+const nameError = document.querySelector('#name-error');
+const emailError = document.querySelector('#email-error');
+const phoneError = document.querySelector('#phone-error');
+const messageError= document.querySelector('#message-error');
+
+function formValidation(){
+        if(nameInput.value.length < 1){
+            nameError.textContent='please type in your name';
+        } else{
+            nameError.textContent='';
+        }
+}
+ */
+
+/* form smtpjs */
 const sumbitBtn = document.querySelector('#submit-btn');
 sumbitBtn.addEventListener('click', function(e){
     e.preventDefault();

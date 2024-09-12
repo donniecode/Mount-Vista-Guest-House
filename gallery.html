@@ -83,12 +83,12 @@
                 Take a glimpse of what our house looks like. Inside and Out!
             </p>
                 <ul class="gallery-tab-menu">
-                    <li class="active-tab-item" id="inside-li">Inside</li>
-                    <li id="outside-li">Outside</li>
-                    <li id="all-li">All</li>
+                    <li data-target="tab-3" class="active-tab-item">Inside</li>
+                    <li data-target="tab-2">Outside</li>
+                    <li data-target="tab-3">All</li>
                 </ul>
 
-                <div class="gallery-images show-imgs" id="inside-li-imgs">
+                <div class="gallery-images show-imgs" id="tab-1">
                     <img src="images/hero.jpg" alt="">
                     <img src="images/inside4.jpeg" alt="">
                     <img src="images/inside2.jpeg" alt="">
@@ -100,7 +100,7 @@
                     <img src="images/inside10.jpeg" alt="">
                     <img src="images/inside6.jpeg" alt="">
                 </div>
-                <div class="gallery-images" id="outside-li-imgs">
+                <div class="gallery-images" id="tab-2">
                     <img src="images/outside1.jpg" alt="">
                     <img src="images/outside2.jpeg" alt="">
                     <img src="images/outside3.jpeg" alt="">
@@ -112,7 +112,7 @@
                     <img src="images/outside3.jpeg" alt="">
                     <img src="images/fountain.jpg" alt="">
                 </div>
-                <div class="gallery-images" id="all-li-imgs">
+                <div class="gallery-images" id="tab-3">
                     <img src="images/hero.jpg" alt="">
                     <img src="images/inside4.jpeg" alt="">
                     <img src="images/inside2.jpeg" alt="">
@@ -130,7 +130,31 @@
      <!-- footer -->
      <footer>
         <div class="container">
+         <div class="footer-grid">
+         <!-- bed and breakfast -->
+         <div class="stars-logo">
+            <img src="images/3-stars.png" alt="">
+        </div>
+        <!-- footer links -->
+         <div class="footer-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#amenities">Amenities</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+            </ul>
+            <ul>
+                <li><a href="rooms.html">Rooms</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html" class="btn-footer">Enquire Now</a></li>
+            </ul>
+         </div>
+
+
+    </div>
             <div class="attribution">
+                <div>Mount Vista &copy 2024</div>
                 <p>website created by <a href="https://www.instagram.com/doniecode/">Donald Zarura | @doniecode</a></p>
             </div>
         </div>
