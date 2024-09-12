@@ -1077,7 +1077,7 @@ footer{
     background-color: #fff;
     position: sticky;
     top: 3.6rem;
-    z-index: 999;
+    z-index: 998;
     padding: 1rem 0;
   }
   }
