@@ -1190,12 +1190,22 @@ footer{
     transform: scale(0.95);
   }
 
+  .room-options{
+    background-color: hsl(0, 0%, 20%);
+  }
+  .room-options li{
+    color: #fff;
+  }
+
   /* gallery */
   .gallery-tab-menu{
-    background-color: #fff;
+    background-color: hsl(0, 0%, 20%);
     position: sticky;
     top: 3.6rem;
     z-index: 998;
     padding: 1rem 0;
+  }
+  .gallery-tab-menu li{
+    color: #fff;
   }
   }
