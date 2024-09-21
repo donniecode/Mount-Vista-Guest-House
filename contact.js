@@ -35,8 +35,8 @@ function formValidation(){
  */
 
 /* form smtpjs */
-const sumbitBtn = document.querySelector('#submit-btn');
-sumbitBtn.addEventListener('click', function(e){
+const sumbitBtn = document.querySelector('form');
+sumbitBtn.addEventListener('submit', function(e){
     e.preventDefault();
 
 let namevalue = document.querySelector('#name').value;
@@ -65,3 +65,4 @@ message => {
 );
 
 })
+

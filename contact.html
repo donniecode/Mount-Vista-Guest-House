@@ -19,8 +19,7 @@
     
         <link rel="stylesheet" href="style.css">
         <!-- phone number codes -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
-      />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
         <title>Mount Vista Guest House | Contact</title>
     </head>
     <body>
@@ -90,20 +89,20 @@
                      <form action="" class="contact-form">
                         <div class="form-group">
                             <i class="fas fa-user"></i>
-                            <input type="text" id="name" name="Name" placeholder="Full Name">
+                            <input type="text" id="name" name="Name" placeholder="Full Name" required>
                             <div class="error" id="name-error"></div>
                         </div>
                         <div class="form-group">
                             <i class="fas fa-envelope"></i>
-                            <input type="email" id="email" name="Email" placeholder="Email">
+                            <input type="email" id="email" name="Email" placeholder="Email" required>
                         </div>
                         <div class="form-group">
                             <i class="fas fa-phone"></i>
-                            <input type="tel" id="phone" name="Phone Number" placeholder="Phone Number">
+                            <input type="tel" id="phone" name="Phone Number" placeholder="Phone Number" required>
                         </div>
                         <div class="form-group message-group">
                             <i class="fas fa-message"></i>
-                            <textarea name="Message" id="message" placeholder="Message"></textarea>
+                            <textarea name="Message" id="message" placeholder="Message" required></textarea>
                         </div>
                         <button type="submit" class="submit-button" id="submit-btn">Send Message</button>
                      </form>
@@ -184,7 +183,7 @@
         </div>
                 <div class="attribution">
                     <div>Mount Vista &copy 2024</div>
-                    <p>website created by <a href="https://www.instagram.com/doniecode/">Donald Zarura | @doniecode</a></p>
+                    <p>website created by <a href="https://www.instagram.com/doniecode/" target="_blank">Donald Zarura | @doniecode</a></p>
                 </div>
          
             
@@ -196,13 +195,11 @@
 
         </body>
 
-          <!-- international phone numbers -->
- <script>
-   const phoneInputField = document.querySelector("#phone");
-   const phoneInput = window.intlTelInput(phoneInputField, {
-     utilsScript:
-       "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-   });
- </script>
- 
+        <script>
+            const phoneInputField = document.querySelector("#phone");
+const phoneInput = window.intlTelInput(phoneInputField, {
+  utilsScript:
+    "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+});
+        </script>
 </html>
