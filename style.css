@@ -517,6 +517,12 @@ details[open] .fa-plus{
     flex-wrap: wrap;
     margin: 2rem 0 2.2rem 0;
     font-weight: 600;
+    background-color: #fff;
+    position: sticky;
+    top: 58px;
+    z-index: 998;
+    padding: 1rem 0;
+    box-shadow: 0 5px 10px -10px;
   }
   .gallery-tab-menu li{
     padding: 0 1rem;
@@ -669,6 +675,34 @@ details[open] .fa-plus{
 .family-rooms{
   margin: 4rem 0;
 }
+
+/* room selection */
+.room-options{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 2rem 0 2.2rem 0;
+  font-weight: 600;
+  position: sticky;
+  top: 58px;
+  z-index: 998;
+  background-color: hsl(0, 0%, 100%);
+  padding: 1rem 0;
+  box-shadow: 0 5px 10px -10px;
+}
+.room-options li{
+  padding: 0 1rem;
+  color: hsl(0, 0%, 30%);
+  padding-bottom: 0.5rem;
+  cursor: pointer;
+}
+.active-li{
+  border-bottom: 3px solid hsl(12, 100%, 83%);
+  font-weight: 700;
+}
+
 
 
   /* mobile html */
