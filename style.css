@@ -656,6 +656,9 @@ details[open] .fa-plus{
     font-size: 0.9rem;
     font-weight: 400;
   }
+  .room-details .bold-text{
+   font-weight: 500;
+  }
 .room-btn{
  /*  color: hsl(12, 100%, 70%); */
   color: #fff;
@@ -1138,7 +1141,7 @@ footer{
     }
     .room{
       max-width: 600px;
-      background-color: hsl(0, 0%, 90%);
+      background-color: hsl(0, 0%, 99%);
       color: hsl(0, 0%, 20%);
       border-radius: 0.5rem;
       height: 100%;
@@ -1161,7 +1164,7 @@ footer{
     .room-details{
       height: auto;
       padding: 0.5rem;
-      background-color: hsl(0, 0%, 96%);
+      background-color: hsl(0, 0%, 95%);
       border: 1.5px solid hsl(12, 100%, 83%);
       border-radius: 0.5rem;
     }
