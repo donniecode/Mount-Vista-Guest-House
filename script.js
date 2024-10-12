@@ -1,4 +1,5 @@
 const header = document.querySelector('header');
+const menuItems = document.querySelector('main-menu li a');
 const backtotop = document.querySelector('.back-to-top');
 
 window.addEventListener('scroll', ()=>{
@@ -10,12 +11,15 @@ window.addEventListener('scroll', ()=>{
 })
 
 window.addEventListener('scroll', function(){
-    if(window.pageYOffset > 300){
+    if(window.pageYOffset > 100){
         header.style.position='fixed';
         header.style.top='0';
         header.style.zIndex='999';
+        header.style.backgroundColor="#fff";
+        menuItems.style.color="hsl(0, 0%, 10%)";
     } else{
-        header.style.position='initial';
+        header.style.position='absolute';
+        header.style.backgroundColor="transparent";
     }
 });
 

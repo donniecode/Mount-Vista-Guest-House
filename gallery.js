@@ -43,7 +43,7 @@ document.getElementById(target).classList.add('show-imgs');
 
 
 /* full image controls */
-const allImagesfull = document.querySelectorAll('.gallery-images img');
+/* const allImagesfull = document.querySelectorAll('.gallery-images img');
 const imgBtns = document.querySelector('.img-full-btns i');
 const imgLeft = document.querySelector('.img-full-btns .fa-chevron-left');
 const imgRight = document.querySelector('.img-full-btns .fa-chevron-right');
@@ -96,6 +96,6 @@ imgRight.addEventListener('click', ()=>{
     n = 0;
   }
 })
-imgClose.addEventListener('click', ()=>{})
+imgClose.addEventListener('click', ()=>{}) */
 
 

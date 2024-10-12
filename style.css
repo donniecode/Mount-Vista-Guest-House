@@ -73,7 +73,7 @@ body {
     font-weight: 400;
     font-style: normal;
     font-size: 1rem;
-    background-color: hsl(0, 0%, 99%);
+    background-color: hsl(0, 0%, 100%);
   }
   a{
     text-decoration: none;
@@ -94,8 +94,11 @@ body {
   header{
     width: 100%;
     padding: 0.3rem 0;
-    background-color: #fff;
-    box-shadow: 0px 5px 20px -10px;
+    background-color: transparent;
+    position: absolute;
+    top: 0px;
+    z-index: 999;
+    box-shadow: 0px 5px 20px -15px;
   }
   .header-flex{
     display: flex;
@@ -105,10 +108,9 @@ body {
   .main-logo{
     font-size: 1rem;
     display: block;
-  }
-  .main-logo span{
-    font-size: 2rem;
-    color: hsl(12, 100%, 83%);
+    background-color: hsl(0, 0%, 50%);
+    padding: 1rem;
+    border-radius: 50%;
   }
   .main-menu{
     display: flex;
@@ -118,8 +120,8 @@ body {
     margin-left: 2rem;
     padding: 0 0.5rem;
   }
-  .main-menu li a{
-    color: hsl(0, 0%, 38%);
+  .main-menu li a:not(.btn){
+    color: hsl(0, 0%, 100%);
     font-weight: 500;
   }
  
@@ -151,25 +153,29 @@ body {
 .about-dropdown ul li{
   padding: 0.5rem;
   border-bottom: 1.5px solid hsl(0, 0%, 70%);
-  color: hsl(0, 0%, 20%);
+  color: hsl(0, 0%, 90%);
   width: 100%;
   cursor: pointer;
   text-align: center;
+}
+.about-dropdown ul li a{
+  color: hsl(0, 0%, 20%);
 }
 .about-dropdown ul li:last-child{
   border-bottom: none;
 }
 .about-dropdown ul li:hover{
   background-color: hsl(0, 0%, 90%);
-  color: hsl(12, 100%, 75%);
+  color: hsl(12, 55%, 55%);
 }
 
-
-  .main-menu li a:not(.btn):hover{
-    color: hsl(12, 100%, 83%);
+.main-menu li a:not(.btn):hover{
+    color: hsl(12, 55%, 55%);
   }
   .btn{
-    background-color: hsl(12, 100%, 83%);
+    background-color: hsl(194, 86%, 34%);
+ /*    background-color: hsl(137, 68%, 11%); */
+ color: #fff;
     padding: 0.5rem 1rem;
     border-radius: 100vmax;
     font-weight: 500;
@@ -177,8 +183,8 @@ body {
   }
   .btn:hover{
     background-color: transparent;
-    color: hsl(12, 100%, 83%);
-    border: 1.8px solid hsl(12, 100%, 83%);
+    color: hsl(192, 72%, 33%);
+    border: 1.8px solid hsl(192, 72%, 33%);
   }
   .btn:hover .fa-chevron-right{
     transform: translateX(5px);
@@ -188,17 +194,18 @@ body {
   .hero{
     width: 100%;
     padding: 7rem 0 2rem 0;
-    background: linear-gradient(rgb(0, 0, 0, 0.8), rgb(0, 0, 0, 0.8)) ,url('images/hero.jpg');
+    background: linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)) ,url('images/hero.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 530px;
+    min-height: 600px;
     position: relative;
+    top: 0;
   }
   video{
     width: 60%;
     height: auto;
-    margin: 0 auto;
+    margin: 2rem auto;
     display: block;
   }
   .hero-content{
@@ -207,75 +214,43 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-top: 3rem;
   }
   .heading-1{
     font-size: 4rem;
     color: #fff;
     font-weight: 800;
     text-transform: uppercase;
+    word-spacing: 1rem;
   }
-  .heading-1 span:not(.dot){
+  .heading-1 span{
     display: block;
-    font-size: 3rem;
-    font-weight: 300;
-  }
-  .heading-1 span .dot{
-    transform: translateY(-20px);
-    color: hsl(12, 100%, 83%);
-    font-size: 3rem;
+    font-size: 2rem;
+    font-weight: 400;
+    word-spacing: 0;
   }
   .hero-text{
     font-size: 1rem;
     color: #fff;
     max-width: 55%;
-    margin: 0.5rem 0;
+    margin: 2rem 0 0.5rem 0;
     font-weight: 500;
   }
   .hero-btns{
     margin-top: 3rem;
   }
+  .btn-hero{
+    background-color: hsl(192, 72%, 33%);
+    color: #fff;
+  }
   .btn-hero2{
     display: none;
   }
-  .trusted-by{
-    width: 100%;
-    text-align: center;
-    background-color: #fff;
-    padding: 1rem 0;
-    margin: 1rem 0;
-    /* border-top: 1px solid hsl(12, 100%, 83%);
-    border-bottom: 1px solid hsl(12, 100%, 83%); */
-    box-shadow: 5px 5px 20px -15px, -5px -5px 20px -15px;
-  }
-  .trusted-by-lead{
-    font-size: 1rem;
-    color: hsl(0, 0%, 20%);
-    font-weight: 600;
-    padding-bottom: 1rem;
-  }
-  .trusted-by-icons{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem 4rem;
-    flex-wrap: wrap;
-   /* s */
-  }
-  .trusted-by-icons img{
-    max-width: 120px;
-  }
-  
-  /* icons animation */
-  @keyframes icons{
-   /* 0%{transform: translateX(10%);} */
-    50%{transform: translateX(-20%);}
-    100%{transform: translateX(20%);}
-  }
-
+ 
   /* about section */
   .about-section{
     width: 100%;
-    padding: 90px 0;
+    padding: 80px 0;
   }
   .about-grid{
     display: grid;
@@ -289,7 +264,7 @@ body {
     border-radius: 0.6rem;
   }
   .section-title{
-    color: hsl(0, 0%, 38%);
+    color: hsl(0, 0%, 20%);
     margin-bottom: 1rem;
     position: relative;
     display: inline-block;
@@ -300,7 +275,7 @@ body {
     position: absolute;
     right: -20px;
     top: 12px;
-    background-color: hsl(12, 100%, 83%);
+    background-color: hsl(192, 72%, 33%);
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -311,40 +286,53 @@ body {
   }
   .about-btn{
     background-color: transparent;
-    color: hsl(12, 100%, 75%);
-    font-weight: 800;
-    text-decoration: underline 0.095rem hsl(12, 100%, 75%);
-    text-underline-offset: 0.3rem;
-    padding-bottom: 1rem;
+    color: hsl(194, 86%, 34%);
+    font-weight: 600;
+    text-decoration: underline 0.095rem hsl(194, 86%, 34%);
+    text-underline-offset: 0.250rem;
+    padding-bottom: 0.5rem;
   }
   .about-btn:hover .fa-chevron-right{
     transform: translateX(10px);
   }
   
 /* Amenities styling */
-.title-lowercase{
-  text-transform: capitalize;
-}
 .amenities-section{
   width: 100%;
+  background-color: hsl(194, 93%, 12%);
+  text-align: center;
+  padding: 2rem 0;
+}
+.amenities-section .section-title{
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 0.8rem;
+}
+.amenities-text{
+  color: hsl(0, 0%, 100%);
 }
 .amenities{
-  display: flex;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   align-items: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 .amenities .amenity{
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  /* justify-content: center; */
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.amenity-name{
+  color: #fff;
+  font-weight: 400;
 }
 .amenities .amenity i{
-  color: hsl(0, 0%, 10%);
-}
-.amenities .amenity img{
-  width: 25px;
-  display: inline;
+  margin-right: 0.5rem;
+  color: hsl(0, 0%, 90%);
 }
 
 /* FAQs Section */
@@ -358,7 +346,7 @@ body {
   margin-bottom: 1rem;
 }
 .faqs-text{
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-style: italic;
 }
 .faqs{
@@ -379,7 +367,7 @@ summary{
   justify-content: space-between;
   gap: 2rem;
   font-weight: 500;
-  background-color: hsl(0, 0%, 75%);
+  background-color: hsl(0, 0%, 70%);
   padding: 0.5rem 1rem;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
@@ -403,13 +391,13 @@ details[open] .fa-plus{
   font-size: 1.2rem;
 }
 .fa-plus{
-  background-color: hsl(12, 100%, 75%);
+  background-color: hsl(192, 72%, 33%);
   color: #fff;
   padding: 0.3rem;
   border-radius: 50%;
 }
 .fa-minus{
-  background-color: hsl(0, 0%, 20%);
+  background-color: hsl(0, 0%, 10%);
   color: #fff;
   padding: 0.3rem;
   border-radius: 50%;
@@ -438,7 +426,8 @@ details[open] .fa-plus{
   gap: 2.5rem;
 }
 .card-buttons i{
-  background-color: hsl(12, 100%, 75%);
+  cursor: pointer;
+  background-color: hsl(0, 0%, 80%);
   padding: 1rem;
   border-radius: 50%;
 }
@@ -480,7 +469,11 @@ details[open] .fa-plus{
 }
 .job{
   font-weight: 400;
-  color: hsl(0, 0%, 40%);
+  color: hsl(0, 0%, 20%);
+}
+.card:nth-of-type(even) .job{
+  font-weight: 400;
+  color: hsl(0, 0%, 80%);
 }
 .stars{
   color: orangered;
@@ -494,7 +487,7 @@ details[open] .fa-plus{
 
   /* gallery.css */
   .gallery-header{
-    background-color: hsl(0, 0%, 95%);
+    background-color: hsl(0, 0%, 100%);
     position: fixed;
     box-shadow: 0px 5px 20px -15px;
     z-index: 999;
@@ -518,9 +511,6 @@ details[open] .fa-plus{
     margin: 2rem 0 2.2rem 0;
     font-weight: 600;
     background-color: #fff;
-    position: sticky;
-    top: 58px;
-    z-index: 998;
     padding: 1rem 0;
     box-shadow: 0 5px 10px -10px;
   }
@@ -550,7 +540,7 @@ details[open] .fa-plus{
     width: 280px;
     margin: 0 auto;
     border-radius: 0.5rem;
-    cursor: pointer;
+    /* cursor: pointer; */
   }
 
   /* room event listener */
@@ -588,61 +578,93 @@ details[open] .fa-plus{
     right: 5%;
   }
 
-  /* Rooms Section */
-  .rooms-header{
-    background-color: hsl(0, 0%, 95%);
-    position: fixed;
+  /* hero background for every page */
+  .rooms-header,
+  .gallery-header,
+  .contact-header{
+    background-color: hsl(0, 0%, 100%);
+    /* position: fixed; */
     box-shadow: 0px 5px 20px -15px;
     z-index: 999;
+
+    
+    width: 100%;
+    background: linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)) ,url('images/outside11.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 350px;
+    position: relative;
+    top: 0;
+  }
+
+  /* Rooms Section */
+  .rooms-title{
+    text-transform: uppercase;
+    font-size: 2.5rem;
+  }
+  .rooms-title,
+  .rooms-text{
+    color: #fff;
+  }
+  .rooms-hero{
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+
+  .rooms-header .main-menu li a,
+  .gallery-header .main-menu li a,
+  .contact-header .main-menu li a{
+    color: #fff;
   }
   .rooms-section{
     width: 100%;
     text-align: center;
     background-color: hsl(0, 0%, 100%);
-    padding: 80px 0;
+    padding: 80px 0 80px 0;
   }
-  .rooms-title{
-    text-transform: uppercase;
-  }
+ 
 
   /* rooms styling */
   .rooms{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
     margin-top: 3.5rem;
   }
   .room{
-    max-width: 250px;
+    max-width: 400px;
     background-color: hsl(0, 0%, 99%);
     color: hsl(0, 0%, 20%);
     border-radius: 0.5rem;
     height: 100%;
-    /* padding-bottom: 0.2rem;
- */
     box-shadow: 5px 5px 20px -10px;
     margin: 0 auto;
   }
   .room img{
+    margin-bottom: 0.6rem;
     max-width: auto;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
+
   }
   .room-name{
     padding: 0.5rem 0;
     color: hsl(0, 0%, 20%);
-    font-weight: 600;
-    font-size: 1rem;
+    font-weight: 700;
+    font-size: 1.2rem;
   }
   .room-details{
     height: auto;
     padding: 0.5rem;
-    background-color: hsl(0, 0%, 95%);
-    border: 1.5px solid hsl(12, 100%, 83%);
+    background-color: hsl(0, 0%, 100%);
     border-radius: 0.5rem;
   }
   .room-details h4{
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 600;
     padding-bottom: 0.3rem;
   }
@@ -653,7 +675,7 @@ details[open] .fa-plus{
     justify-content: center
   }
   .room-details ul li{
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 400;
   }
   .room-details .bold-text{
@@ -661,17 +683,15 @@ details[open] .fa-plus{
   }
 .room-btn{
  /*  color: hsl(12, 100%, 70%); */
-  color: #fff;
-  background-color: hsl(12, 100%, 70%);
+  color: hsl(194, 86%, 34%);
   margin: 0.3rem 0;
   display: inline-block;
   padding: 0.2rem 0.5rem;
   border-radius: 100vmax;
-  font-weight: 400;
+  font-weight: 600;
   box-shadow: 0px 5px 20px -15px;
 }
 .room-btn:hover{
-  background-color: hsl(12, 100%, 75%);
   transform: scale(0.95);
 }
 /* family rooms */
@@ -688,8 +708,8 @@ details[open] .fa-plus{
   flex-wrap: wrap;
   margin: 2rem 0 2.2rem 0;
   font-weight: 600;
-  position: sticky;
-  top: 58px;
+/*   position: sticky;
+  top: 58px; */
   z-index: 998;
   background-color: hsl(0, 0%, 100%);
   padding: 1rem 0;
@@ -703,7 +723,7 @@ details[open] .fa-plus{
 }
 .active-li{
   border-bottom: 3px solid hsl(12, 100%, 83%);
-  font-weight: 700;
+  font-weight: 800;
 }
 
 
